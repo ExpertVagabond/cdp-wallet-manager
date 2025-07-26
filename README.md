@@ -1,43 +1,49 @@
-# CDP Wallet Manager
+# ZetaChain Universal App Starter
 
-The CDP Wallet Manager is a comprehensive web application that showcases the capabilities of the Coinbase Developer Platform (CDP) SDK. This project serves as a powerful demonstration of how developers can leverage CDP to build robust, user-friendly blockchain applications.
-To learn more about CDP, check out the [developer docs](https://docs.cdp.coinbase.com/cdp-apis/docs/welcome).
+The ZetaChain Universal App Starter is a comprehensive web application that showcases the capabilities of building universal applications that work across all blockchains using ZetaChain. This project serves as a powerful demonstration of how developers can leverage ZetaChain's omnichain infrastructure to build truly universal blockchain applications.
+
+To learn more about ZetaChain, check out the [developer docs](https://docs.zetachain.com).
 
 ## Key Features:
 
-1. **Wallet Management**: Create, view, and manage MPC wallets across different networks.
+1. **Universal Wallet Management**: Create, view, and manage wallets that work across all connected blockchains.
 
-2. **Address Handling**: Generate and manage addresses within each wallet, supporting various blockchain networks.
+2. **Cross-Chain Address Handling**: Generate and manage addresses that can interact with multiple blockchain networks seamlessly.
 
-3. **Balance Tracking**: Real-time balance display for each address, supporting multiple cryptocurrencies.
+3. **Omnichain Balance Tracking**: Real-time balance display across all connected chains and cryptocurrencies.
 
-4. **Faucet Integration**: Easy access to testnet faucets for quick funding of addresses during development and testing.
+4. **Multi-Chain Faucet Integration**: Access to testnet faucets across multiple blockchain networks for development and testing.
 
-5. **Transfer Functionality**: Seamless creation and execution of cryptocurrency transfers between addresses.
+5. **Universal Transfer Functionality**: Cross-chain transfers and messaging capabilities powered by ZetaChain.
 
-6. **Onramp Support**: Integration with Coinbase's onramp feature, allowing users to buy cryptocurrencies directly within the application.
+6. **Cross-Chain Contract Interaction**: Deploy and interact with universal smart contracts that work across all blockchains.
 
-7. **Network Flexibility**: Support for both mainnet and testnet environments, with easy switching between networks.
+7. **Omnichain Network Support**: Native support for all major blockchain networks through ZetaChain's universal infrastructure.
 
-8. **Responsive Design**: A clean, intuitive user interface that works across desktop and mobile devices.
+8. **Modern Universal UI**: A sleek, responsive interface designed for the multi-chain future.
 
-9. **Dark Mode**: Built-in dark mode support for enhanced user experience in different lighting conditions.
+9. **ZetaChain Integration**: Full integration with ZetaChain's omnichain protocols and developer tools.
 
-This project is ideal for developers looking to understand the implementation of blockchain wallet functionalities using the CDP SDK. It provides a solid foundation that can be extended and customized for various blockchain-based applications.
+This project is ideal for developers looking to build universal applications that work across all blockchains. It provides a solid foundation for creating truly omnichain applications using ZetaChain's infrastructure.
 
-By exploring and using the CDP Wallet Manager, developers can gain hands-on experience with key blockchain operations, security best practices, and user interface design for crypto applications.
+By exploring and using the ZetaChain Universal App Starter, developers can gain hands-on experience with:
+- Cross-chain smart contract development
+- Universal wallet integration
+- Omnichain messaging and transfers
+- Multi-chain dApp architecture
+- ZetaChain protocol integration
 
-Whether you're building a DeFi platform, a crypto portfolio tracker, or any other blockchain-based service, the CDP Wallet Manager offers valuable insights and a practical starting point for your development journey with the Coinbase Developer Platform.
+Whether you're building a DeFi platform, a cross-chain NFT marketplace, or any other universal blockchain application, this starter provides the foundation for your omnichain development journey.
 
 ***The application does not have built-in authentication. Ensure that you add an authentication layer before deploying it to production.***
 
 ## Getting Started
-### Get your API keys
-Go to https://portal.cdp.coinbase.com/ and create an API key if you don't already have one.
+### Get your ZetaChain API keys
+Go to https://portal.cdp.coinbase.com/ and create an API key for blockchain interactions, or set up your ZetaChain node connection.
 
 ### Create an encryption key
 
-This encryption key is used to secure your private keys stored in vercel postgres. You can generate one using the following command:
+This encryption key is used to secure your private keys stored in the database. You can generate one using the following command:
 
 ```bash
 openssl rand -hex 32
@@ -53,6 +59,8 @@ CDP_API_KEY_SECRET="your-api-key-secret"
 ENCRYPTION_KEY="your-encryption-key"
 POSTGRES_URL="postgresql://admin:password@localhost:5432/seeds"
 NEXT_PUBLIC_CDP_PROJECT_ID="your-cdp-project-id"
+ZETACHAIN_NETWORK="testnet" # or "mainnet"
+ZETACHAIN_RPC_URL="your-zetachain-rpc-url"
 ```
 
 ### Run the Postgres DB
@@ -88,26 +96,36 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+You can start building your universal app by modifying the components and adding your cross-chain logic.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ZetaChain Features
+
+### Cross-Chain Messaging
+Send messages and data between any connected blockchain networks.
+
+### Universal Smart Contracts
+Deploy contracts that can interact with multiple blockchains simultaneously.
+
+### Omnichain Tokens
+Create and manage tokens that exist across all supported networks.
+
+### Multi-Chain Faucets
+Access testnet tokens from multiple blockchain networks for development.
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+To learn more about ZetaChain and universal app development:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- [ZetaChain Documentation](https://docs.zetachain.com) - comprehensive guides and API reference
+- [ZetaChain Examples](https://github.com/zeta-chain/example-contracts) - example universal contracts
+- [ZetaChain Discord](https://discord.gg/zetachain) - community support and discussions
 
 ## Deploy on Vercel
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fcoinbase%2Fcdp-wallet-manager&env=CDP_API_KEY_NAME,CDP_API_KEY_SECRET,NEXT_PUBLIC_CDP_PROJECT_ID,ENCRYPTION_KEY&envDescription=Download%20CDP%20API%20key%20name%2C%20secret%2C%20project%20ID%20from%20CDP%20portal)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fzetachain%2Funiversal-app-starter&env=CDP_API_KEY_NAME,CDP_API_KEY_SECRET,NEXT_PUBLIC_CDP_PROJECT_ID,ENCRYPTION_KEY,ZETACHAIN_NETWORK&envDescription=Set%20up%20your%20ZetaChain%20universal%20app%20environment)
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Contributing
 
-## Desired features 
-- Tagging wallets with display name; more generally, metadata.
+We welcome contributions to the ZetaChain Universal App Starter! Please see our contributing guidelines and join our community on Discord.

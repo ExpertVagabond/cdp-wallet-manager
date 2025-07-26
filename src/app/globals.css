@@ -5,20 +5,20 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #333333;
-  --primary: #2563eb;
-  --secondary: #222428;
-  --button-text: #2563eb; /* New variable for button text */
+  --background: #0f0f23;
+  --foreground: #ffffff;
+  --primary: #8b5cf6;
+  --secondary: #14b8a6;
+  --button-text: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #1f2937;
+    --background: #0f0f23;
     --foreground: #f3f4f6;
-    --primary: #d2def1;
-    --secondary: #94a3b8;
-    --button-text: #ffffff; /* Keep white text for dark mode buttons */
+    --primary: #8b5cf6;
+    --secondary: #14b8a6;
+    --button-text: #ffffff;
   }
 }
 
@@ -62,7 +62,6 @@ a:hover {
   }
 }
 
-/* Add this new style for buttons */
 button, .button {
   color: var(--button-text);
   background-color: var(--primary);
@@ -83,4 +82,25 @@ button:hover, .button:hover {
 
 .animate-spin {
   animation: spin 1s linear infinite;
+}
+/* ZetaChain specific styles */
+.gradient-bg {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.neon-glow {
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.3);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #8b5cf6, #14b8a6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }

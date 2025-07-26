@@ -30,7 +30,7 @@ export async function GET() {
     const filteredWallets = wallets.filter((wallet): wallet is Wallet => wallet !== null);
     const walletListResponse = filteredWallets.map((wallet) => ({
       id: wallet.getId(),
-      name: "My Wallet",
+      name: wallet.getNetworkId().includes('zetachain') ? "ZetaChain Wallet" : "Universal Wallet",
       network: wallet.getNetworkId(),
     }));
     return NextResponse.json(walletListResponse);
